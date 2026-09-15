@@ -25,10 +25,12 @@
 
 先修改 [data.json](data.json)。两个工具使用同一组数据，字体与抗锯齿会产生视觉差异，不要求像素相同。
 
+这是固定布局样例：保留六个时点 `00:00、04:00、08:00、12:00、16:00、20:00`，橙色标记固定指向第四点，页面快照固定显示 `12:00`。修改 SOC 时，同时更新 `soc` 与 `soc_series` 的第四项，避免指标与曲线不一致。改变时点、样本数或快照时间需要同步修改两份绘图脚本和构建脚本；`snapshot` 字段目前不会自动驱动布局。接近 100% 的标注及更长的数字也需要重新检查边界和排版。
+
 Python 路线：
 
 ```sh
-python -m pip install matplotlib python-pptx Pillow
+python -m pip install matplotlib==3.10.8
 python plot_soc.py
 ```
 
@@ -41,6 +43,12 @@ plot_soc
 两条路线均输出 `soc-curve.svg` 和 `soc-curve.png`；默认会替换本目录的同名导出图。需保留原图时，Python 用 `--out-dir` 指定另一个目录，MATLAB 用 `plot_soc('另一个输出目录')`。
 
 ## 构建 PPT
+
+无论曲线由 MATLAB 还是 Python 生成，构建 PPT 都需要 Python。下载完整示例目录，在该目录安装[构建依赖](requirements.txt)：
+
+```sh
+python -m pip install -r requirements.txt
+```
 
 保持 `equipment.png`、`soc-curve.png`、`data.json` 与构建脚本相邻：
 
@@ -60,7 +68,9 @@ Windows 安装 Microsoft PowerPoint 后，可使用 PowerShell 验证：
 
 ## 已验证范围与差距
 
+- PPT 构建已验证：Python 3.12.14、python-pptx 1.0.2、Pillow 12.3.0。Python 绘图已验证：Python 3.14.2、Matplotlib 3.10.8；这两条路径在不同 Python 环境执行，不表示所有依赖组合均已验证。
 - 本机实际运行 MATLAB R2023b 和 Python/Matplotlib 绘图，两者均生成 SVG 与 PNG。
+- PPT 和 MATLAB 脚本使用 Microsoft YaHei；字体不随仓库分发，缺少时需选择可用中文字体并重新检查换行。PowerShell 验证脚本仅适用于装有桌面版 PowerPoint 的 Windows；其他平台可构建，但本仓库未验证其渲染与编辑结果。
 - 实际使用 PowerPoint 16.0 打开、渲染、编辑、保存及重开；检查结果见上方 JSON。
 - 字体字重、图表渲染、设备分离后的微小纹理与连接角度相较参考有差异；不承诺像素级一致。
 - 设备图由图像工具分离和修复，未能确认实际模型型号。只公开最终无字素材；不包含私人项目资料。
