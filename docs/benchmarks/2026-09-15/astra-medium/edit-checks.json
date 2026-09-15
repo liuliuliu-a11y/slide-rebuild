@@ -1,0 +1,16 @@
+{
+  "powerpoint_version": "16.0",
+  "slide_count": 1,
+  "title_edit": true,
+  "table_edit": true,
+  "node_move": true,
+  "node_label_preserved": true,
+  "connector_end_connected": true,
+  "metric_group_children": 2,
+  "metric_module_preserved": true,
+  "plot_movable": true,
+  "graph_edit_mode": "MATLAB or Python source regeneration; image in PPT",
+  "formula_edit_mode": "editable text, not Office equation",
+  "original_preserved": true,
+  "passed": true
+}

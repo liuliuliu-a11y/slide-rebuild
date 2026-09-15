@@ -24,7 +24,7 @@ description: >-
 
 - [acceptance.md](acceptance.md)：对象、视觉、编辑与分级验收的唯一标准。
 - [checklist.md](checklist.md)：当前页执行检查，不增加阈值。
-- [reuse-and-measurement.md](references/reuse-and-measurement.md)：首次确定构建路线、文字测量、分组与局部修改时读取；复用已确定配置。
+- [reuse-and-measurement.md](references/reuse-and-measurement.md)：首次确定构建路线、复用固定样例、修改数据、文字测量与分组时读取；由 AI 检查并适配脚本中的固定假设。
 - [benchmark-evaluation.md](references/benchmark-evaluation.md)：用户要求工具对测，或实际修改共用构建/渲染工具时读取；日常单页制作不运行整组基准。
 - [page-object-plan.md](templates/page-object-plan.md)：缺少页面对象计划时按需使用；已有上游 brief/manifest 可直接映射，不复制填表。
 

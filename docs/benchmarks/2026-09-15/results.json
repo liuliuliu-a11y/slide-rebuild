@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-15",
+  "runs_per_configuration": 1,
+  "generation_scope": "Independent PPT reconstruction from shared reference, accurate text and prepared device/plot assets",
+  "timing_scope": "Dispatch to report; common verification and packaging excluded",
+  "models": [
+    {
+      "output": "astra-medium",
+      "model": "gpt-6-astra",
+      "dispatch_utc": "2026-09-15T01:50:38Z",
+      "reasoning_effort": "medium",
+      "completion_observed_utc": "2026-09-15T01:56:24Z",
+      "dispatch_to_report_seconds": 346
+    },
+    {
+      "output": "sol-high",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "high",
+      "dispatch_utc": "2026-09-15T01:56:24Z",
+      "external_interruption": {
+        "reason": "Parent turn interrupted by user follow-up; user requested benchmark continue",
+        "timing_comparability": "Wall time includes interruption and resume; not a clean speed comparison",
+        "exact_pause_duration_seconds": null,
+        "detected_and_resumed_utc": "2026-09-15T02:02:08Z"
+      },
+      "completion_observed_utc": "2026-09-15T02:12:34Z",
+      "dispatch_to_report_seconds": 970
+    }
+  ],
+  "inputs": [
+    {
+      "name": "data.json",
+      "sha256": "69122C6A38EBC67DA5FEA977F307A66DF7545F88BB884C01DCE65C49B49E073F",
+      "bytes": 374
+    },
+    {
+      "name": "equipment.png",
+      "sha256": "56B2D91F452F4C5CC56600144B48B935D4C4501C64858B9BBC052355F78EAACF",
+      "bytes": 1638614
+    },
+    {
+      "name": "plot_soc.m",
+      "sha256": "74643464A1028017BA739282CDA9F6556ABE1EB4E971B00327C1420EA2193A2B",
+      "bytes": 2006
+    },
+    {
+      "name": "plot_soc.py",
+      "sha256": "60A2F035E36F13E139C37CE38BA3D50DD4FC972988F5CC9F3721533DE4255298",
+      "bytes": 1758
+    },
+    {
+      "name": "reference.png",
+      "sha256": "E2447FA35F8DB98E7BFA4B0111DB562CFA02A009414272D301878749740033FD",
+      "bytes": 1372293
+    },
+    {
+      "name": "soc-curve.png",
+      "sha256": "CF2C302F8D6627FD6A32AD9C41051B59747739964A404E177ED35B4557D8B4AD",
+      "bytes": 54249
+    },
+    {
+      "name": "soc-curve.svg",
+      "sha256": "D7CD26392F352173D22629E9B67BBE67651793F44C6794BE5C9F5AF248465B81",
+      "bytes": 49985
+    }
+  ],
+  "tokens": null,
+  "cost": null,
+  "actual_backend_snapshot": null,
+  "common_functional_checks": "passed both",
+  "full_visual_and_edit_quality": "not fully passed either",
+  "visual_review": "Anonymous reviewer preferred astra-medium; sol-high control arrow points to blank area",
+  "font_preservation": "Both show fallback after common COM full-text replacement; origin not isolated",
+  "skill_improvements": "Sample adaptation guidance included before test; visible connection endpoints and post-edit font checks added after test, not rebenchmarked"
+}

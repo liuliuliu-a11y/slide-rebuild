@@ -11,4 +11,6 @@ tmp/
 *.pptx
 *.pdf
 !examples/thermal-storage-demo/rebuilt.pptx
+!docs/benchmarks/2026-09-15/astra-medium/rebuilt.pptx
+!docs/benchmarks/2026-09-15/sol-high/rebuilt.pptx
 examples/**/verification/

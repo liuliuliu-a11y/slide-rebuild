@@ -12,6 +12,8 @@ Slide Rebuild is an agent skill for reconstructing visual slides into editable P
 
 示例包含原生文字、表格和连接对象；科研曲线由 MATLAB 或 Python 生成并保留源文件。参数与设备均为虚构演示。
 
+[查看 Astra 中 / Sol 高同页实测](docs/benchmarks/2026-09-15/README.md)：包含实际耗时、首轮与最终候选、编辑检查及未通过项。
+
 ## 能力与定位
 
 - 准确文稿和源数据优先，OCR 只补缺项和辅助定位。
