@@ -1,0 +1,103 @@
+{
+  "page": "pageXX",
+  "page_type": "",
+  "source_mode": "external-reference",
+  "page_brief_path": "",
+  "reference_version": "",
+  "reference_sha256": "",
+  "reference_path": "",
+  "output_pptx": "",
+  "preview_path": "",
+  "work_asset_root": "",
+  "contact_sheet_path": "",
+  "quality_gate": {
+    "minimum_effective_ppi": {
+      "icons_and_thin_line_assets": 220,
+      "large_no_text_visuals": 180,
+      "preferred_for_screenshots_and_diagram_fragments": 300
+    },
+    "blocking_defects": [
+      "clipped_strokes_or_edges",
+      "clipped_shadows",
+      "residual_source_text",
+      "model_pseudo_writing",
+      "watermark",
+      "dirty_white_background",
+      "visible_mask_or_white_block",
+      "rough_background_removal_edge",
+      "background_mismatch",
+      "compression_artifacts",
+      "pixelation",
+      "blur_at_final_display_size",
+      "non_proportional_stretching"
+    ]
+  },
+  "assets": [
+    {
+      "asset_id": "",
+      "role": "",
+      "reference_region": "",
+      "generation_method": "host_image_editor",
+      "provenance_kind": "new_generation",
+      "generation_receipt_path": "",
+      "requested_model": null,
+      "actual_model": null,
+      "model_verified": false,
+      "reuse_basis": "",
+      "native_label_ids": [],
+      "prompt_or_instruction": "",
+      "original_generated_path": "",
+      "copied_original_path": "",
+      "source_path": "",
+      "source_dimensions_px": {
+        "width": 0,
+        "height": 0
+      },
+      "crop_box_px": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "crop_padding_px": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "cleanup_steps": [],
+      "crop_or_cleanup_path": "",
+      "output_dimensions_px": {
+        "width": 0,
+        "height": 0
+      },
+      "slide_position_in": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "effective_ppi": {
+        "x": 0,
+        "y": 0,
+        "passes": false
+      },
+      "aspect_ratio_preserved": false,
+      "transparent_or_background_status": "",
+      "no_text_check": {
+        "passes": false,
+        "notes": ""
+      },
+      "edge_integrity_check": {
+        "passes": false,
+        "notes": ""
+      },
+      "final_preview_check": {
+        "passes": false,
+        "notes": ""
+      },
+      "blocking_defects_found": [],
+      "status": "pending"
+    }
+  ]
+}
