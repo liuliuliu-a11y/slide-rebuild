@@ -21,7 +21,8 @@ def validate(root):
         if not frontmatter or not re.search(r"^name: slide-rebuild$", frontmatter[1], re.M):
             errors.append("Invalid skill name/frontmatter")
     checked = 0
-    files = [root / "README.md", *skill.rglob("*.md")]
+    files = [*root.glob("*.md"), *skill.rglob("*.md"),
+             *(root / "docs").rglob("*.md"), *(root / "examples").rglob("*.md")]
     for path in files:
         if not path.is_file():
             continue
@@ -35,7 +36,7 @@ def validate(root):
             if not resolved.is_relative_to(root.resolve()) or not resolved.exists():
                 errors.append(f"Broken/outside link: {path.relative_to(root)} -> {target}")
             checked += 1
-    for path in skill.rglob("*.json"):
+    for path in [*skill.rglob("*.json"), *(root / "examples").rglob("*.json")]:
         try:
             json.loads(path.read_text(encoding="utf-8-sig"))
         except (ValueError, UnicodeError) as exc:

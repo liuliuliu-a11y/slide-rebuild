@@ -4,10 +4,18 @@
 
 Slide Rebuild is an agent skill for reconstructing visual slides into editable PowerPoint files. It emphasizes source accuracy, reusable tooling, and verification in Microsoft PowerPoint.
 
+## 公开案例
+
+![工业储热系统 PowerPoint 实际渲染](examples/thermal-storage-demo/preview.png)
+
+[查看原图与复刻对照](examples/thermal-storage-demo/README.md) · [下载示例 PPTX](examples/thermal-storage-demo/rebuilt.pptx) · [首次使用](docs/getting-started.md) · [可编辑范围](docs/editability.md)
+
+示例包含原生文字、表格和连接对象；科研曲线由 MATLAB 或 Python 生成并保留源文件。参数与设备均为虚构演示。
+
 ## 能力与定位
 
 - 准确文稿和源数据优先，OCR 只补缺项和辅助定位。
-- 文字、表格、流程和所需数据图表保持原生可编辑。
+- 文字、表格、流程保持原生可编辑；科研曲线通过 MATLAB / Python 数据和脚本修改，只有明确要求 PPT 内改数据的图表才做原生 chart。
 - 复杂设备、插画和场景使用独立无字图片层。
 - 优先复用已有构建器、脚本和素材，不为每页重写底层逻辑。
 - 区分新页与局部修改，只重测受影响项。

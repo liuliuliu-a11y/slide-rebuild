@@ -10,3 +10,5 @@ work/
 tmp/
 *.pptx
 *.pdf
+!examples/thermal-storage-demo/rebuilt.pptx
+examples/**/verification/
